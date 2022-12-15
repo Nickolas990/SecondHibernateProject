@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="dump-hibernate-2.sql" type="DatabaseScript" editBeforeRun="true" singleton="false" nameIsGenerated="true">
+    <script-file value="$PROJECT_DIR$/dump-hibernate-2.sql" />
+    <script-mode>FILE</script-mode>
+    <data-source id="be00d6ea-1f3f-4081-8718-3c96c3e5f31d" namespace="schema/&quot;movie&quot;" />
+    <method v="2" />
+  </configuration>
+</component>
