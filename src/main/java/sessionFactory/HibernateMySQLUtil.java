@@ -1,21 +1,26 @@
 package sessionFactory;
 
+import dao.*;
+import dao.FilmTextDAO;
 import entity.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Properties;
+@Getter
+@Setter
+public class HibernateMySQLUtil  extends HibernateUtils {
 
-public class HibernateMySQLUtil {
-    private static HibernateMySQLUtil instance;
-    static Properties mysqlProperties;
-    private final SessionFactory sessionFactory;
 
-    private HibernateMySQLUtil() {
+
+    public HibernateMySQLUtil() {
         initialiseProps();
         sessionFactory = new Configuration()
-                .setProperties(mysqlProperties)
+                .setProperties(properties)
                 .addAnnotatedClass(Actor.class)
                 .addAnnotatedClass(Address.class)
                 .addAnnotatedClass(Category.class)
@@ -23,7 +28,7 @@ public class HibernateMySQLUtil {
                 .addAnnotatedClass(Country.class)
                 .addAnnotatedClass(Customer.class)
                 .addAnnotatedClass(Film.class)
-                .addAnnotatedClass(FilmText.class)
+                .addAnnotatedClass(dao.FilmTextDAO.class)
                 .addAnnotatedClass(Inventory.class)
                 .addAnnotatedClass(Language.class)
                 .addAnnotatedClass(Payment.class)
@@ -31,20 +36,35 @@ public class HibernateMySQLUtil {
                 .addAnnotatedClass(Staff.class)
                 .addAnnotatedClass(Store.class)
                 .buildSessionFactory();
+
+
+        actorDAO = new ActorDAO(sessionFactory);
+        addressDAO = new AddressDAO(sessionFactory);
+        categoryDAO = new CategoryDAO(sessionFactory);
+        cityDAO = new CityDAO(sessionFactory);
+        countryDAO = new CountryDAO(sessionFactory);
+        customerDAO = new CustomerDAO(sessionFactory);
+        filmDAO = new FilmDAO(sessionFactory);
+        filmTextDAO = new FilmTextDAO(sessionFactory);
+        inventoryDAO = new InventoryDAO(sessionFactory);
+        languageDAO = new LanguageDAO(sessionFactory);
+        paymentDAO = new PaymentDAO(sessionFactory);
+        rentalDAO= new RentalDAO(sessionFactory);
+        staffDAO = new StaffDAO(sessionFactory);
+        storeDAO = new StoreDAO(sessionFactory);
     }
 
-    public static SessionFactory getSessionFactory() {
-        if (instance == null) {
-            instance = new HibernateMySQLUtil();
-        }
-        return instance.sessionFactory;
+    @Override
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
+
     private static void initialiseProps() {
         try {
-            mysqlProperties = new Properties();
-            mysqlProperties.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("hibernateMySQL.properties"));
+            properties = new Properties();
+            properties.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("hibernateMySQL.properties"));
         } catch (IOException e) {
-            throw new RuntimeException("Properties -file for Hibernate (MySQL) not found");
+            throw new RuntimeException("Properties-file for Hibernate (MySQL) not found");
         }
     }
 

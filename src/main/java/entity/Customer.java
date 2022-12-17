@@ -19,7 +19,7 @@ import java.util.Set;
 public class Customer {
     @Id
     @Column(name = "customer_id", columnDefinition = "SMALLINT UNSIGNED not null")
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

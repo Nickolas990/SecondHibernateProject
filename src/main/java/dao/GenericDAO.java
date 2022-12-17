@@ -19,7 +19,7 @@ public abstract class GenericDAO<T> {
     }
 
     public List<T> getItems(int offset, int count) {
-        Query<T> query = getCurrentSession().createQuery("from" + clazz.getName(), clazz);
+        Query query = getCurrentSession().createQuery("from " + clazz.getName(), clazz);
         query.setFirstResult(offset);
         query.setMaxResults(count);
         return query.getResultList();
@@ -47,7 +47,7 @@ public abstract class GenericDAO<T> {
     }
 
     protected Session getCurrentSession() {
-        return sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
+        return session;
     }
-
 }

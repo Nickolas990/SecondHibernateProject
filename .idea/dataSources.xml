@@ -8,5 +8,13 @@
       <jdbc-url>jdbc:mysql://localhost:3306/movie</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="SecondProjectHibernate/Hibernate" uuid="740df418-336e-4187-b703-c661751ad9d3">
+      <imported>true</imported>
+      <configured-by-url>true</configured-by-url>
+      <remarks>Hibernate</remarks>
+      <jdbc-driver>com.p6spy.engine.spy.P6SpyDriver</jdbc-driver>
+      <jdbc-url>jdbc:p6spy:mysql://localhost:3306/movie</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
