@@ -5,11 +5,10 @@ import dao.FilmTextDAO;
 import entity.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import java.io.IOException;
-import java.util.ArrayList;
+
 import java.util.Properties;
 @Getter
 @Setter
@@ -54,15 +53,13 @@ public class HibernateMySQLUtil  extends HibernateUtils {
         storeDAO = new StoreDAO(sessionFactory);
     }
 
-    @Override
-    public SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
-
     private static void initialiseProps() {
         try {
             properties = new Properties();
             properties.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("hibernateMySQL.properties"));
+            properties.setProperty("hibernate.connection.username", System.getenv("MYSQL_DB_USER"));
+            properties.setProperty("hibernate.connection.password", System.getenv("MYSQL_DB_PASSWORD"));
+            properties.setProperty("hibernate.connection.url", System.getenv("DB_URL"));
         } catch (IOException e) {
             throw new RuntimeException("Properties-file for Hibernate (MySQL) not found");
         }

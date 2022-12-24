@@ -1,9 +1,10 @@
 package dao;
 
+import entity.Inventory;
 import org.hibernate.SessionFactory;
 
-public class InventoryDAO extends GenericDAO<InventoryDAO>{
+public class InventoryDAO extends GenericDAO<Inventory>{
     public InventoryDAO(SessionFactory sessionFactory) {
-        super(InventoryDAO.class, sessionFactory);
+        super(Inventory.class, sessionFactory);
     }
 }

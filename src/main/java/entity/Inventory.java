@@ -1,8 +1,7 @@
 package entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
@@ -11,6 +10,9 @@ import java.time.Instant;
 @Table(name = "inventory", schema = "movie")
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Inventory {
     @Id
     @Column(name = "inventory_id", nullable = false)

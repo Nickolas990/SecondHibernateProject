@@ -4,31 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e309eca-0023-4a05-a887-033f2cc86e5e" name="Changes" comment="DAO created">
-      <change afterPath="$PROJECT_DIR$/example-changelog.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liquibase.advanced.flow" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liquibase.endstage.flow" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liquibase.flowfile.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liquibase.flowvariables.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/liquibase.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javarush/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sessionFactory/HibernateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spy.properties" afterDir="false" />
+    <list default="true" id="2e309eca-0023-4a05-a887-033f2cc86e5e" name="Changes" comment="transaction problem solved.&#10;From now singleton not used anymore.">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy-datasource.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.jpb/persistence-units.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/converters/RatingConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/converters/YearAttributeConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/AddressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/FilmService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/17-01-changelog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/17-12-changelog.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/dump_hibernate_2_sql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/dump_hibernate_2_sql.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump-hibernate-2.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/liquibase.properties" beforeDir="false" afterPath="$PROJECT_DIR$/liquibase.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CityDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/FilmText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/FilmTextDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/GenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/GenericDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/InventoryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/FilmDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/FilmDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/InventoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/InventoryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/LanguageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/LanguageDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/RentalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/RentalDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Rental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/enums/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/enums/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javarush/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javarush/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sessionFactory/HibernateMySQLUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sessionFactory/HibernateMySQLUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sessionFactory/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sessionFactory/HibernateUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernateMySQL.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernateMySQL.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/javarush/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +101,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hrom_/IdeaProjects/SecondProjectHibernate&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hrom_/IdeaProjects/SecondProjectHibernate/.env&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -100,12 +112,15 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
       &quot;mysql&quot;
     ],
     &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;be00d6ea-1f3f-4081-8718-3c96c3e5f31d/schema/\&quot;information_schema\&quot;&quot;,
       &quot;be00d6ea-1f3f-4081-8718-3c96c3e5f31d/schema/\&quot;jr_db\&quot;&quot;,
-      &quot;be00d6ea-1f3f-4081-8718-3c96c3e5f31d/schema/\&quot;movie\&quot;&quot;
+      &quot;be00d6ea-1f3f-4081-8718-3c96c3e5f31d/schema/\&quot;movie\&quot;&quot;,
+      &quot;f39bb7be-4340-405a-86fb-22d5a7bb783e/database/\&quot;movie\&quot;&quot;,
+      &quot;394f54c8-9ccf-412e-b0ae-f6bda4c27b88/schema/\&quot;movie\&quot;&quot;,
+      &quot;394f54c8-9ccf-412e-b0ae-f6bda4c27b88&quot;
     ],
     &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
       &quot;MySQL&quot;
@@ -119,9 +134,18 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hrom_\IdeaProjects\SecondProjectHibernate" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hrom_\IdeaProjects\SecondProjectHibernate\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="MYSQL_DB_USER" value="root" />
+        <env name="MYSQL_DB_PASSWORD" value="qwerty" />
+        <env name="DB_URL" value="jdbc:p6spy:mysql://localhost:3306/movie" />
+      </envs>
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="org.javarush.App" />
       <module name="SecondProjectHibernate" />
       <extension name="coverage">
@@ -130,10 +154,31 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="true" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="true" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="false" PARSER="env" IS_EXECUTABLE="false" PATH=".env" />
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="dump-hibernate-2 (1).sql" type="DatabaseScript" editBeforeRun="true" singleton="false" nameIsGenerated="true">
+      <script-mode>FILE</script-mode>
+      <data-source id="394f54c8-9ccf-412e-b0ae-f6bda4c27b88" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Database Script.dump-hibernate-2 (1).sql" />
+      <item itemvalue="Database Script.dump-hibernate-2.sql" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
@@ -152,7 +197,9 @@
       <workItem from="1671049277307" duration="21458000" />
       <workItem from="1671118111898" duration="7407000" />
       <workItem from="1671133515981" duration="2407000" />
-      <workItem from="1671200083500" duration="8021000" />
+      <workItem from="1671200083500" duration="18791000" />
+      <workItem from="1671380446428" duration="20639000" />
+      <workItem from="1671670137721" duration="21222000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1671098954019</created>
@@ -168,16 +215,45 @@
       <option name="project" value="LOCAL" />
       <updated>1671099446604</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="transaction problem solved.&#10;From now singleton not used anymore.">
+      <created>1671270121445</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671270121445</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="DAO created" />
-    <option name="LAST_COMMIT_MESSAGE" value="DAO created" />
+    <MESSAGE value="transaction problem solved.&#10;From now singleton not used anymore." />
+    <option name="LAST_COMMIT_MESSAGE" value="transaction problem solved.&#10;From now singleton not used anymore." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.ObjectNotFoundException" package="org.hibernate" />
+          <option name="timeStamp" value="14" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

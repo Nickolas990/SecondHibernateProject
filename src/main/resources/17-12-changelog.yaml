@@ -1,0 +1,1146 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1671270701648-1
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: actor_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: first_name
+                  type: VARCHAR(45)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: last_name
+                  type: VARCHAR(45)
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: actor
+  - changeSet:
+      id: 1671270701648-2
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: address_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: address
+                  type: VARCHAR(50)
+              - column:
+                  name: address2
+                  type: VARCHAR(50)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: district
+                  type: VARCHAR(20)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: city_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  name: postal_code
+                  type: VARCHAR(10)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: phone
+                  type: VARCHAR(20)
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: address
+  - changeSet:
+      id: 1671270701648-3
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: category_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: VARCHAR(25)
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: category
+  - changeSet:
+      id: 1671270701648-4
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: city_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: city
+                  type: VARCHAR(50)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: country_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: city
+  - changeSet:
+      id: 1671270701648-5
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: country_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: country
+                  type: VARCHAR(50)
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: country
+  - changeSet:
+      id: 1671270701648-6
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: customer_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: store_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: first_name
+                  type: VARCHAR(45)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: last_name
+                  type: VARCHAR(45)
+              - column:
+                  name: email
+                  type: VARCHAR(50)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: address_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueBoolean: true
+                  name: active
+                  type: BIT(1)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: create_date
+                  type: datetime
+              - column:
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: customer
+  - changeSet:
+      id: 1671270701648-7
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: film_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: title
+                  type: VARCHAR(128)
+              - column:
+                  name: description
+                  type: TEXT
+              - column:
+                  name: release_year
+                  type: YEAR(4)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: language_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  name: original_language_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueNumeric: !!float '3'
+                  name: rental_duration
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: '4.99'
+                  name: rental_rate
+                  type: DECIMAL(4, 2)
+              - column:
+                  name: length
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: '19.99'
+                  name: replacement_cost
+                  type: DECIMAL(5, 2)
+              - column:
+                  defaultValue: G
+                  name: rating
+                  type: ENUM('NC-17', 'R', 'PG-13', 'PG', 'G')
+              - column:
+                  name: special_features
+                  type: SET('Behind the Scenes', 'Deleted Scenes', 'Commentaries', 'Trailers')
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: film
+  - changeSet:
+      id: 1671270701648-8
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: actor_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: film_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: film_actor
+  - changeSet:
+      id: 1671270701648-9
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: film_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: category_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: film_category
+  - changeSet:
+      id: 1671270701648-10
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: film_id
+                  type: SMALLINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: title
+                  type: VARCHAR(255)
+              - column:
+                  name: description
+                  type: TEXT
+            tableName: film_text
+  - changeSet:
+      id: 1671270701648-11
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: inventory_id
+                  type: MEDIUMINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: film_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: store_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: inventory
+  - changeSet:
+      id: 1671270701648-12
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: language_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: name
+                  type: CHAR(20)
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: language
+  - changeSet:
+      id: 1671270701648-13
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: payment_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: customer_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: staff_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  name: rental_id
+                  type: INT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: amount
+                  type: DECIMAL(5, 2)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: payment_date
+                  type: datetime
+              - column:
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: payment
+  - changeSet:
+      id: 1671270701648-14
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: rental_id
+                  type: INT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: rental_date
+                  type: datetime
+              - column:
+                  constraints:
+                    nullable: false
+                  name: inventory_id
+                  type: MEDIUMINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: customer_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  name: return_date
+                  type: datetime
+              - column:
+                  constraints:
+                    nullable: false
+                  name: staff_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: rental
+  - changeSet:
+      id: 1671270701648-15
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: staff_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: first_name
+                  type: VARCHAR(45)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: last_name
+                  type: VARCHAR(45)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: address_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  name: picture
+                  type: BLOB
+              - column:
+                  name: email
+                  type: VARCHAR(50)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: store_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueBoolean: true
+                  name: active
+                  type: BIT(1)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: username
+                  type: VARCHAR(16)
+              - column:
+                  name: password
+                  type: VARCHAR(40)
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: staff
+  - changeSet:
+      id: 1671270701648-16
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: store_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                    unique: true
+                  name: manager_staff_id
+                  type: TINYINT(3) UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  name: address_id
+                  type: SMALLINT UNSIGNED
+              - column:
+                  constraints:
+                    nullable: false
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  name: last_update
+                  type: timestamp
+            tableName: store
+  - changeSet:
+      id: 1671270701648-17
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addUniqueConstraint:
+            columnNames: rental_date, inventory_id, customer_id
+            constraintName: rental_date
+            tableName: rental
+  - changeSet:
+      id: 1671270701648-18
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: category_id
+            indexName: fk_film_category_category
+            tableName: film_category
+  - changeSet:
+      id: 1671270701648-19
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: rental_id
+            indexName: fk_payment_rental
+            tableName: payment
+  - changeSet:
+      id: 1671270701648-20
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: last_name
+            indexName: idx_actor_last_name
+            tableName: actor
+  - changeSet:
+      id: 1671270701648-21
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: address_id
+            indexName: idx_fk_address_id
+            tableName: customer
+  - changeSet:
+      id: 1671270701648-22
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: address_id
+            indexName: idx_fk_address_id
+            tableName: staff
+  - changeSet:
+      id: 1671270701648-23
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: address_id
+            indexName: idx_fk_address_id
+            tableName: store
+  - changeSet:
+      id: 1671270701648-24
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: city_id
+            indexName: idx_fk_city_id
+            tableName: address
+  - changeSet:
+      id: 1671270701648-25
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: country_id
+            indexName: idx_fk_country_id
+            tableName: city
+  - changeSet:
+      id: 1671270701648-26
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: customer_id
+            indexName: idx_fk_customer_id
+            tableName: payment
+  - changeSet:
+      id: 1671270701648-27
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: customer_id
+            indexName: idx_fk_customer_id
+            tableName: rental
+  - changeSet:
+      id: 1671270701648-28
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: film_id
+            indexName: idx_fk_film_id
+            tableName: film_actor
+  - changeSet:
+      id: 1671270701648-29
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: film_id
+            indexName: idx_fk_film_id
+            tableName: inventory
+  - changeSet:
+      id: 1671270701648-30
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: inventory_id
+            indexName: idx_fk_inventory_id
+            tableName: rental
+  - changeSet:
+      id: 1671270701648-31
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: language_id
+            indexName: idx_fk_language_id
+            tableName: film
+  - changeSet:
+      id: 1671270701648-32
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: original_language_id
+            indexName: idx_fk_original_language_id
+            tableName: film
+  - changeSet:
+      id: 1671270701648-33
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: staff_id
+            indexName: idx_fk_staff_id
+            tableName: payment
+  - changeSet:
+      id: 1671270701648-34
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: staff_id
+            indexName: idx_fk_staff_id
+            tableName: rental
+  - changeSet:
+      id: 1671270701648-35
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: store_id
+            indexName: idx_fk_store_id
+            tableName: customer
+  - changeSet:
+      id: 1671270701648-36
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: store_id
+            indexName: idx_fk_store_id
+            tableName: staff
+  - changeSet:
+      id: 1671270701648-37
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: last_name
+            indexName: idx_last_name
+            tableName: customer
+  - changeSet:
+      id: 1671270701648-38
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: store_id
+              - column:
+                  name: film_id
+            indexName: idx_store_id_film_id
+            tableName: inventory
+  - changeSet:
+      id: 1671270701648-39
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: title
+            indexName: idx_title
+            tableName: film
+  - changeSet:
+      id: 1671270701648-40
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: title
+              - column:
+                  name: description
+            indexName: idx_title_description
+            tableName: film_text
+  - changeSet:
+      id: 1671270701648-41
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: city_id
+            baseTableName: address
+            constraintName: fk_address_city
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: city_id
+            referencedTableName: city
+  - changeSet:
+      id: 1671270701648-42
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: country_id
+            baseTableName: city
+            constraintName: fk_city_country
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: country_id
+            referencedTableName: country
+  - changeSet:
+      id: 1671270701648-43
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: address_id
+            baseTableName: customer
+            constraintName: fk_customer_address
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: address_id
+            referencedTableName: address
+  - changeSet:
+      id: 1671270701648-44
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: store_id
+            baseTableName: customer
+            constraintName: fk_customer_store
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: store_id
+            referencedTableName: store
+  - changeSet:
+      id: 1671270701648-45
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: actor_id
+            baseTableName: film_actor
+            constraintName: fk_film_actor_actor
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: actor_id
+            referencedTableName: actor
+  - changeSet:
+      id: 1671270701648-46
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: film_id
+            baseTableName: film_actor
+            constraintName: fk_film_actor_film
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: film_id
+            referencedTableName: film
+  - changeSet:
+      id: 1671270701648-47
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: category_id
+            baseTableName: film_category
+            constraintName: fk_film_category_category
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: category_id
+            referencedTableName: category
+  - changeSet:
+      id: 1671270701648-48
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: film_id
+            baseTableName: film_category
+            constraintName: fk_film_category_film
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: film_id
+            referencedTableName: film
+  - changeSet:
+      id: 1671270701648-49
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: language_id
+            baseTableName: film
+            constraintName: fk_film_language
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: language_id
+            referencedTableName: language
+  - changeSet:
+      id: 1671270701648-50
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: original_language_id
+            baseTableName: film
+            constraintName: fk_film_language_original
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: language_id
+            referencedTableName: language
+  - changeSet:
+      id: 1671270701648-51
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: film_id
+            baseTableName: inventory
+            constraintName: fk_inventory_film
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: film_id
+            referencedTableName: film
+  - changeSet:
+      id: 1671270701648-52
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: store_id
+            baseTableName: inventory
+            constraintName: fk_inventory_store
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: store_id
+            referencedTableName: store
+  - changeSet:
+      id: 1671270701648-53
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: customer_id
+            baseTableName: payment
+            constraintName: fk_payment_customer
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: customer_id
+            referencedTableName: customer
+  - changeSet:
+      id: 1671270701648-54
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: rental_id
+            baseTableName: payment
+            constraintName: fk_payment_rental
+            onDelete: SET NULL
+            onUpdate: CASCADE
+            referencedColumnNames: rental_id
+            referencedTableName: rental
+  - changeSet:
+      id: 1671270701648-55
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: staff_id
+            baseTableName: payment
+            constraintName: fk_payment_staff
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: staff_id
+            referencedTableName: staff
+  - changeSet:
+      id: 1671270701648-56
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: customer_id
+            baseTableName: rental
+            constraintName: fk_rental_customer
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: customer_id
+            referencedTableName: customer
+  - changeSet:
+      id: 1671270701648-57
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: inventory_id
+            baseTableName: rental
+            constraintName: fk_rental_inventory
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: inventory_id
+            referencedTableName: inventory
+  - changeSet:
+      id: 1671270701648-58
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: staff_id
+            baseTableName: rental
+            constraintName: fk_rental_staff
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: staff_id
+            referencedTableName: staff
+  - changeSet:
+      id: 1671270701648-59
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: address_id
+            baseTableName: staff
+            constraintName: fk_staff_address
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: address_id
+            referencedTableName: address
+  - changeSet:
+      id: 1671270701648-60
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: store_id
+            baseTableName: staff
+            constraintName: fk_staff_store
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: store_id
+            referencedTableName: store
+  - changeSet:
+      id: 1671270701648-61
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: address_id
+            baseTableName: store
+            constraintName: fk_store_address
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: address_id
+            referencedTableName: address
+  - changeSet:
+      id: 1671270701648-62
+      author: hrom_ (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: manager_staff_id
+            baseTableName: store
+            constraintName: fk_store_staff
+            onDelete: RESTRICT
+            onUpdate: CASCADE
+            referencedColumnNames: staff_id
+            referencedTableName: staff
+

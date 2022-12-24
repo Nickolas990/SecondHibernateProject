@@ -30,6 +30,8 @@ public abstract class HibernateUtils {
     protected StaffDAO staffDAO;
     protected StoreDAO storeDAO;
 
-    public abstract SessionFactory getSessionFactory();
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
 
 }

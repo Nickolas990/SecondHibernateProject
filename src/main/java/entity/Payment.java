@@ -1,8 +1,7 @@
 package entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -13,6 +12,9 @@ import java.time.Instant;
 @Table(name = "payment")
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Payment {
     @Id
     @Column(name = "payment_id", columnDefinition = "SMALLINT UNSIGNED not null")

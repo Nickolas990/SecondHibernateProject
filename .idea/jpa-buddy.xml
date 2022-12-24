@@ -3,6 +3,12 @@
   <component name="JpaBuddyIdeaProjectConfig">
     <option name="defaultUnitInitialized" value="true" />
     <option name="renamerInitialized" value="true" />
+    <option name="sourceModelValue" value="Entity" />
+    <option name="targetDbValue" value="be00d6ea-1f3f-4081-8718-3c96c3e5f31d" />
+    <option name="snapshotDbValue" value="be00d6ea-1f3f-4081-8718-3c96c3e5f31d" />
+    <option name="updateChangeLogPath" value="src/main/resources/17-01-changelog.yaml" />
+    <option name="updateDbConnectionName" value="01a7949d-5927-436e-a4c0-47ebe2a0fb61" />
+    <option name="updateLogLevel" value="WARNING" />
     <option name="reverseEngineeringLastDbConnectionId" value="be00d6ea-1f3f-4081-8718-3c96c3e5f31d" />
     <option name="reLastEntityCreationPackage" value="src/main/java/entity" />
   </component>
